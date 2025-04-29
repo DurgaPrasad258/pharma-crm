@@ -1,0 +1,9 @@
+<h1>Doctors</h1>
+<a href="{% url 'add_doctor' %}">Add Doctor</a>
+<ul>
+  {% for doctor in doctors %}
+    <li>
+      <a href="{% url 'doctor_detail' doctor.id %}">{{ doctor.name }}</a>
+    </li>
+  {% endfor %}
+</ul>

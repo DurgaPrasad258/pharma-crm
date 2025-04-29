@@ -1,0 +1,12 @@
+<h1>CRM Dashboard</h1>
+<p>Total Doctors: {{ doctor_count }}</p>
+<p>Total Visits: {{ visit_count }}</p>
+
+<h3>Upcoming Follow-ups</h3>
+<ul>
+  {% for visit in upcoming_followups %}
+    <li>{{ visit.doctor.name }} - {{ visit.next_followup }}</li>
+  {% empty %}
+    <li>No upcoming follow-ups.</li>
+  {% endfor %}
+</ul>
