@@ -1,5 +1,18 @@
-<h2>{{ object.name }}</h2>
-<p>Specialty: {{ object.specialty }}</p>
-<p>Hospital: {{ object.hospital }}</p>
-<p>Location: {{ object.location }}</p>
-<a href="{% url 'add_visit' %}">Add Visit</a>
+{% extends 'crm/base.html' %}
+
+{% block content %}
+<div class="card shadow-sm">
+  <div class="card-header">
+    Doctor Profile
+  </div>
+  <div class="card-body">
+    <h4 class="card-title">{{ object.name }}</h4>
+    <p><strong>Specialty:</strong> {{ object.specialty }}</p>
+    <p><strong>Hospital:</strong> {{ object.hospital }}</p>
+    <p><strong>Location:</strong> {{ object.location }}</p>
+    <a href="{% url 'add_visit' %}" class="btn btn-outline-primary mt-3">
+      <i class="bi bi-calendar-plus"></i> Add Visit
+    </a>
+  </div>
+</div>
+{% endblock %}

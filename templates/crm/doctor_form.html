@@ -1,6 +1,16 @@
-<h2>Add Doctor</h2>
-<form method="post">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">Save</button>
-</form>
+{% extends 'crm/base.html' %}
+
+{% block content %}
+<div class="card shadow-sm">
+  <div class="card-header">Add New Doctor</div>
+  <div class="card-body">
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" class="btn btn-success">
+        <i class="bi bi-save"></i> Save
+      </button>
+    </form>
+  </div>
+</div>
+{% endblock %}

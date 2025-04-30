@@ -1,12 +1,35 @@
-<h1>CRM Dashboard</h1>
-<p>Total Doctors: {{ doctor_count }}</p>
-<p>Total Visits: {{ visit_count }}</p>
+{% extends 'crm/base.html' %}
 
-<h3>Upcoming Follow-ups</h3>
-<ul>
-  {% for visit in upcoming_followups %}
-    <li>{{ visit.doctor.name }} - {{ visit.next_followup }}</li>
-  {% empty %}
-    <li>No upcoming follow-ups.</li>
-  {% endfor %}
-</ul>
+{% block content %}
+<div class="row">
+  <div class="col-md-6">
+    <div class="card mb-3 shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">👨‍⚕️ Total Doctors</h5>
+        <p class="card-text">{{ doctor_count }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card mb-3 shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">📅 Total Visits</h5>
+        <p class="card-text">{{ visit_count }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    Upcoming Follow-ups
+  </div>
+  <ul class="list-group list-group-flush">
+    {% for visit in upcoming_followups %}
+      <li class="list-group-item">{{ visit.doctor.name }} - {{ visit.next_followup }}</li>
+    {% empty %}
+      <li class="list-group-item text-muted">No upcoming follow-ups.</li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}

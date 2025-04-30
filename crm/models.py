@@ -22,7 +22,6 @@ class Visit(models.Model):
     date = models.DateField()
     notes = models.TextField()
     next_followup = models.DateField(blank=True, null=True)
-    products_discussed = models.ManyToManyField(Product, blank=True)
 
     def __str__(self):
         return f"Visit to {self.doctor.name} on {self.date}"

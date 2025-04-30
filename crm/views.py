@@ -21,7 +21,7 @@ class DoctorCreateView(CreateView):
 
 class VisitCreateView(CreateView):
     model = Visit
-    fields = ['doctor', 'date', 'notes', 'next_followup', 'products_discussed']
+    fields = ['doctor', 'date', 'notes', 'next_followup']
     template_name = 'crm/visit_form.html'
     success_url = reverse_lazy('home')
 
