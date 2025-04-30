@@ -1,23 +1,20 @@
 # Pharma CRM 🏥💊
 
-A Customer Relationship Management (CRM) system tailored for pharmaceutical companies, built with Django and MySQL.
+A Customer Relationship Management (CRM) system tailored for pharmaceutical companies, built with Python, Django and MySQL.
 
 ## 🚀 Features
 
-- User registration and authentication (JWT-based)
 - Role-based access for Admin, Sales, and Support users
 - Customer and contact management
 - Sales lead tracking and conversion
 - Notes, tasks, and appointment scheduling
 - Dynamic dashboards with statistics
-- Admin panel for full control
 
 ## 🛠️ Tech Stack
 
 - Backend: Django (Python)
 - Database: MySQL
-- Authentication: JWT
-- Frontend: HTML templates (Django)
+- Frontend: HTML templates (Bootstrap)
 - API: Django REST Framework
 
 ---
